@@ -1,0 +1,2 @@
+<?php
+ $myDb->connect(); $sql = "SELECT enableadsense FROM yob_site WHERE id='1'"; $result = mysql_query($sql); $row = mysql_fetch_array($result); $myDb->close(); $enabled = $row['enableadsense']; if ($enabled == "yes"){ $myDb->connect(); $sql = "SELECT code FROM yob_adsense WHERE id='1'"; $result = mysql_query($sql); $row = mysql_fetch_array($result); $myDb->close(); echo $row['code']; }else{ } ?>
